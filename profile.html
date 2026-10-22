@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي | PasswordGuard</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="logo">🛡️ PasswordGuard</a>
+
+        <nav class="navbar">
+            <a href="index.html">الرئيسية</a>
+            <a href="analyze.html">تحليل كلمة المرور</a>
+            <a href="tips.html">نصائح الأمان</a>
+            <a href="profile.html" class="active">ملفي الشخصي</a>
+        </nav>
+    </header>
+
+    <main class="page-container profile-container">
+
+        <div class="page-heading">
+            <div class="section-icon">👤</div>
+            <h1>الملف الشخصي</h1>
+            <p class="muted">إدارة معلومات حسابك وإعدادات الأمان</p>
+        </div>
+
+        <section class="content-card profile-card">
+            <div class="profile-avatar">👤</div>
+            <h2 id="profile-heading">حسابي</h2>
+            <p class="muted">معلومات الحساب</p>
+
+            <form id="profile-form">
+
+                <label for="profile-name">الاسم الكامل</label>
+                <input
+                    type="text"
+                    id="profile-name"
+                    placeholder="أدخل اسمك"
+                    required
+                    maxlength="80"
+                >
+
+                <label for="profile-email">البريد الإلكتروني</label>
+                <input
+                    type="email"
+                    id="profile-email"
+                    placeholder="example@email.com"
+                    required
+                >
+
+                <p id="profile-message"
+                   class="form-message"
+                   role="status"
+                   aria-live="polite"></p>
+
+                <button type="submit" class="btn btn-primary full-width">
+                    حفظ التعديلات
+                </button>
+            </form>
+        </section>
+
+        <section class="content-card profile-card">
+            <h2>🔐 أمان الحساب</h2>
+            <p class="muted">
+                حافظ على أمان حسابك باستخدام كلمة مرور قوية.
+            </p>
+
+            <a href="change-password.html"
+               class="btn btn-outline full-width">
+                تغيير كلمة المرور
+            </a>
+        </section>
+
+        <section class="content-card profile-card danger-card">
+            <h2>حذف الحساب</h2>
+            <p class="muted">
+                حذف الحساب المحلي إجراء مهم. لن تتمكن من استخدام
+                الحساب المحذوف لتسجيل الدخول مرة أخرى.
+            </p>
+
+            <button type="button"
+                    id="delete-account-button"
+                    class="btn btn-danger full-width">
+                حذف حسابي نهائياً
+            </button>
+
+            <p id="delete-message"
+               class="form-message"
+               role="status"
+               aria-live="polite"></p>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 PasswordGuard - حماية حسابك تبدأ منك</p>
+    </footer>
+<script src="js/script.js"></script>
+</body>
+</html>

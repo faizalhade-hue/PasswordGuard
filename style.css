@@ -1,0 +1,644 @@
+
+/* ========================================
+   PasswordGuard - التنسيقات العامة
+   ألوان طبيعية ومريحة للعين
+======================================== */
+
+:root {
+    --bg: #F5F3EE;
+    --surface: #FFFFFF;
+    --surface-light: #E8EEE9;
+    --primary: #52796F;
+    --primary-hover: #3F6258;
+    --text: #26332F;
+    --muted: #65736D;
+    --border: #D9E1DA;
+    --danger: #B85C5C;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Tahoma, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button,
+.btn {
+    -webkit-tap-highlight-color: transparent;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* ========================================
+   رأس الموقع وشريط التنقل
+======================================== */
+
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 5%;
+    background: var(--surface-light);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--primary);
+    font-size: 23px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.navbar a {
+    color: var(--muted);
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background: var(--surface);
+    color: var(--primary);
+}
+
+/* ========================================
+   العناوين والنصوص
+======================================== */
+
+h1,
+h2,
+h3 {
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: clamp(25px, 5vw, 36px);
+    margin: 12px 0;
+}
+
+h2 {
+    font-size: 21px;
+}
+
+p {
+    margin-top: 8px;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.eyebrow {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* ========================================
+   الصفحة الرئيسية
+======================================== */
+
+.hero {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.hero-icon,
+.section-icon {
+    font-size: 48px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero-text {
+    max-width: 650px;
+    margin: 15px auto 25px;
+    color: var(--muted);
+    font-size: 17px;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0 40px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    padding: 22px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(38, 51, 47, 0.08);
+}
+
+.feature-icon {
+    font-size: 32px;
+}
+
+.feature-card h2 {
+    color: var(--primary);
+}
+
+.feature-card p {
+    color: var(--muted);
+}
+
+/* ========================================
+   الأزرار
+======================================== */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 46px;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    color: #FFFFFF;
+}
+
+.btn-outline {
+    background: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--surface-light);
+    color: var(--primary-hover);
+}
+
+.full-width {
+    width: 100%;
+    margin-top: 18px;
+}
+
+/* ========================================
+   الحاويات والبطاقات العامة
+======================================== */
+
+.page-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 35px 18px;
+    flex: 1;
+}
+
+.narrow-container {
+    max-width: 600px;
+}
+
+.content-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 8px 24px rgba(38, 51, 47, 0.06);
+}
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.center-action {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* ========================================
+   صفحة نصائح الأمان
+======================================== */
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.tip-card {
+    padding: 22px;
+}
+
+.tip-card h2 {
+    color: var(--primary);
+}
+
+.tip-card p {
+    color: var(--muted);
+}
+
+/* ========================================
+   النماذج: الدخول والتسجيل والتواصل
+======================================== */
+
+.form-card {
+    text-align: right;
+}
+
+.form-card > .section-icon,
+.form-card > h1,
+.form-card > .muted {
+    text-align: center;
+}
+
+form {
+    margin-top: 25px;
+}
+
+label {
+    display: block;
+    margin: 16px 0 7px;
+    font-weight: bold;
+    color: var(--text);
+}
+
+input:not([type="checkbox"]),
+textarea {
+    display: block;
+    width: 100%;
+    padding: 13px 14px;
+    color: var(--text);
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(82, 121, 111, 0.12);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #87928C;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+    color: var(--muted);
+}
+
+.checkbox-label input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+}
+
+.form-bottom {
+    margin-top: 22px;
+    text-align: center;
+    color: var(--muted);
+}
+
+.form-bottom a {
+    font-weight: bold;
+}
+
+.form-message {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.field-hint,
+.security-note {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.security-note {
+    margin-top: 20px;
+    padding: 12px;
+    background: #F2F5F0;
+    border-right: 3px solid var(--primary);
+    border-radius: 6px;
+}
+
+/* ========================================
+   رسائل النجاح والخطأ
+======================================== */
+
+.success-message {
+    color: #356B50;
+}
+
+.error-message {
+    color: var(--danger);
+}
+
+/* ========================================
+   صفحة تحليل كلمة المرور
+======================================== */
+
+.analyzer-card {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.analyzer-card > .section-icon,
+.analyzer-card > h1,
+.analyzer-card > .muted {
+    text-align: center;
+}
+
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    background: #F7F8F5;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.result-box h2 {
+    color: var(--primary);
+}
+
+.strength-track {
+    width: 100%;
+    height: 12px;
+    overflow: hidden;
+    background: #E1E7E1;
+    border-radius: 20px;
+}
+
+.strength-bar {
+    width: 0;
+    height: 100%;
+    background: var(--primary);
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+#analysis-feedback {
+    padding-right: 22px;
+}
+
+#analysis-feedback li {
+    margin: 7px 0;
+}
+
+/* ========================================
+   تذييل الموقع
+======================================== */
+
+.site-footer {
+    margin-top: auto;
+    padding: 20px 15px;
+    text-align: center;
+    color: var(--muted);
+    background: var(--surface-light);
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+}
+
+/* ========================================
+   التوافق مع شاشات الهاتف
+======================================== */
+
+@media (max-width: 650px) {
+    .site-header {
+        padding: 15px 10px;
+    }
+
+    .navbar {
+        gap: 5px;
+    }
+
+    .navbar a {
+        padding: 7px 9px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 35px 15px;
+    }
+
+    .feature-grid,
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-card {
+        padding: 20px 16px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .page-container {
+        padding: 25px 12px;
+    }
+}
+
+
+/* ========================================
+   زر تسجيل الخروج
+======================================== */
+
+.logout-button {
+    font-size: 13px;
+    padding: 7px 12px;
+    min-height: 38px;
+    background: transparent;
+    color: var(--danger);
+    border-color: var(--danger);
+}
+
+.logout-button:hover {
+    background: #F8EAE8;
+    color: #8F4141;
+}
+
+/* ========================================
+   إظهار وإخفاء كلمة المرور
+======================================== */
+
+.password-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.password-field input:not([type="checkbox"]) {
+    flex: 1;
+    width: 0;
+    min-width: 0;
+    margin: 0;
+    direction: ltr;
+}
+
+.password-eye {
+    flex-shrink: 0;
+    min-width: 46px;
+    min-height: 46px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: var(--surface-light);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 19px;
+    transition: background 0.2s;
+}
+
+.password-eye:hover {
+    background: #DCE6DF;
+}
+
+.password-eye:focus-visible,
+.logout-button:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   صفحة الملف الشخصي
+======================================== */
+
+.profile-container {
+    max-width: 720px;
+}
+
+.profile-card {
+    margin-bottom: 22px;
+}
+
+.profile-avatar {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    font-size: 36px;
+}
+
+.profile-card > h2,
+.profile-card > .muted {
+    text-align: center;
+}
+
+.profile-card form {
+    margin-top: 20px;
+}
+
+.btn-danger {
+    background: #B85C5C;
+    color: #FFFFFF;
+    border-color: #B85C5C;
+}
+
+.btn-danger:hover {
+    background: #984747;
+    color: #FFFFFF;
+}
+
+.danger-card {
+    border-color: #E7C8C4;
+}
+
+#profile-message,
+#delete-message {
+    overflow-wrap: anywhere;
+}

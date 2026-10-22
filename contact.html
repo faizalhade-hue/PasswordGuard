@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا | PasswordGuard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="contact-page">
+
+    <header class="site-header">
+        <a class="logo" href="index.html">🛡️ PasswordGuard</a>
+        <nav class="navbar">
+            <a href="index.html">الرئيسية</a>
+            <a href="analyze.html">تحليل كلمة المرور</a>
+            <a href="tips.html">نصائح الأمان</a>
+            <a href="login.html">تسجيل الدخول</a>
+            <a href="register.html">إنشاء حساب</a>
+            <a class="active" href="contact.html">تواصل معنا</a>
+          <a href="profile.html" class="">ملفي الشخصي</a>
+     
+        </nav>
+    </header>
+
+    <main class="page-container narrow-container">
+        <section class="content-card form-card">
+            <div class="section-icon">✉️</div>
+            <h1>تواصل معنا</h1>
+            <p class="muted">
+                لديك سؤال أو اقتراح حول المشروع؟ اكتب رسالتك هنا.
+            </p>
+
+            <form id="contact-form">
+                <label for="contact-name">الاسم</label>
+                <input
+                    type="text"
+                    id="contact-name"
+                    placeholder="اكتب اسمك"
+                    autocomplete="name"
+                    required
+                >
+
+                <label for="contact-email">البريد الإلكتروني</label>
+                <input
+                    type="email"
+                    id="contact-email"
+                    placeholder="name@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="contact-subject">موضوع الرسالة</label>
+                <input
+                    type="text"
+                    id="contact-subject"
+                    placeholder="موضوع رسالتك"
+                    required
+                >
+
+                <label for="contact-message">الرسالة</label>
+                <textarea
+                    id="contact-message"
+                    rows="5"
+                    placeholder="اكتب رسالتك هنا..."
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn btn-primary full-width">
+                    إرسال الرسالة
+                </button>
+
+                <p id="contact-status" class="form-message" aria-live="polite"></p>
+            </form>
+
+            <p class="security-note">
+                إرسال الرسالة فعليًا يحتاج إلى خدمة خلفية أو واجهة إرسال.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 PasswordGuard</p>
+    </footer>
+<script src="js/script.js"></script>
+</body>
+</html>

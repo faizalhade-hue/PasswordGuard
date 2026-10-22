@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول | PasswordGuard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+
+    <header class="site-header">
+        <a class="logo" href="index.html">🛡️ PasswordGuard</a>
+        <nav class="navbar">
+            <a href="index.html">الرئيسية</a>
+            <a href="analyze.html">تحليل كلمة المرور</a>
+            <a href="tips.html">نصائح الأمان</a>
+            <a class="active" href="login.html">تسجيل الدخول</a>
+            <a href="register.html">إنشاء حساب</a>
+            <a href="contact.html">تواصل معنا</a>
+          <a href="profile.html" class="">ملفي الشخصي</a>
+     
+        </nav>
+    </header>
+
+    <main class="page-container narrow-container">
+        <section class="content-card form-card">
+            <div class="section-icon">👤</div>
+            <h1>تسجيل الدخول</h1>
+            <p class="muted">أدخل بياناتك للمتابعة.</p>
+
+            <form id="login-form">
+                <label for="login-email">البريد الإلكتروني</label>
+                <input
+                    type="email"
+                    id="login-email"
+                    placeholder="name@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="login-password">كلمة المرور</label>
+                <input
+                    type="password"
+                    id="login-password"
+                    placeholder="أدخل كلمة المرور"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button type="submit" class="btn btn-primary full-width">
+                    تسجيل الدخول
+                </button>
+
+                <p id="login-message" class="form-message" aria-live="polite"></p>
+            </form>
+
+            <p class="form-bottom">
+                ليس لديك حساب؟
+                <a href="register.html">أنشئ حسابًا جديدًا</a>
+            </p>
+
+            <p class="security-note">
+                هذه واجهة تعليمية؛ تسجيل الدخول الحقيقي يحتاج إلى خادم آمن.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 PasswordGuard</p>
+    </footer>
+<script src="js/script.js"></script>
+</body>
+</html>

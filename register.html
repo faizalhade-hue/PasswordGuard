@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب | PasswordGuard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="register-page">
+
+    <header class="site-header">
+        <a class="logo" href="index.html">🛡️ PasswordGuard</a>
+        <nav class="navbar">
+            <a href="index.html">الرئيسية</a>
+            <a href="analyze.html">تحليل كلمة المرور</a>
+            <a href="tips.html">نصائح الأمان</a>
+            <a href="login.html">تسجيل الدخول</a>
+            <a class="active" href="register.html">إنشاء حساب</a>
+            <a href="contact.html">تواصل معنا</a>
+          <a href="profile.html" class="">ملفي الشخصي</a>
+     
+        </nav>
+    </header>
+
+    <main class="page-container narrow-container">
+        <section class="content-card form-card">
+            <div class="section-icon">📝</div>
+            <h1>إنشاء حساب جديد</h1>
+            <p class="muted">املأ الحقول التالية لإنشاء حسابك.</p>
+
+            <form id="register-form">
+                <label for="register-name">الاسم</label>
+                <input
+                    type="text"
+                    id="register-name"
+                    placeholder="اكتب اسمك"
+                    autocomplete="name"
+                    required
+                >
+
+                <label for="register-email">البريد الإلكتروني</label>
+                <input
+                    type="email"
+                    id="register-email"
+                    placeholder="name@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="register-password">كلمة المرور</label>
+                <input
+                    type="password"
+                    id="register-password"
+                    placeholder="أنشئ كلمة مرور"
+                    autocomplete="new-password"
+                    minlength="12"
+                    required
+                >
+
+                <p class="field-hint">
+                    استخدم كلمة مرور طويلة وفريدة، ويفضل 12 حرفًا أو أكثر.
+                </p>
+
+                <label for="confirm-password">تأكيد كلمة المرور</label>
+                <input
+                    type="password"
+                    id="confirm-password"
+                    placeholder="أعد كتابة كلمة المرور"
+                    autocomplete="new-password"
+                    required
+                >
+
+                <button type="submit" class="btn btn-primary full-width">
+                    إنشاء الحساب
+                </button>
+
+                <p id="register-message" class="form-message" aria-live="polite"></p>
+            </form>
+
+            <p class="form-bottom">
+                لديك حساب بالفعل؟
+                <a href="login.html">سجّل الدخول</a>
+            </p>
+
+            <p class="security-note">
+                هذه واجهة تعليمية ولا تنشئ حسابًا حقيقيًا أو تحفظ بياناتك.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 PasswordGuard</p>
+    </footer>
+
+<script src="js/script.js"></script> 
+</body>
+</html>

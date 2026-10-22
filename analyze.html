@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحليل كلمة المرور | PasswordGuard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="analyze-page">
+
+    <header class="site-header">
+        <a class="logo" href="index.html">🛡️ PasswordGuard</a>
+        <nav class="navbar">
+            <a href="index.html">الرئيسية</a>
+            <a class="active" href="analyze.html">تحليل كلمة المرور</a>
+            <a href="tips.html">نصائح الأمان</a>
+            <a href="login.html">تسجيل الدخول</a>
+            <a href="register.html">إنشاء حساب</a>
+            <a href="contact.html">تواصل معنا</a>
+          <a href="profile.html" class="">ملفي الشخصي</a>
+     
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <section class="content-card analyzer-card">
+            <div class="section-icon">🔐</div>
+            <h1>تحليل أمن كلمة المرور</h1>
+            <p class="muted">
+                أدخل كلمة مرور تجريبية لتقييم قوتها ومعرفة كيفية تحسينها.
+            </p>
+
+            <form id="analyzer-form">
+                <label for="password-input">كلمة المرور</label>
+
+                <input
+                    type="password"
+                    id="password-input"
+                    placeholder="اكتب كلمة مرور تجريبية"
+                    autocomplete="off"
+                    required
+                >
+
+                <label class="checkbox-label">
+                    <input type="checkbox" id="show-password">
+                    إظهار كلمة المرور
+                </label>
+
+                <button class="btn btn-primary full-width" type="submit">
+                    تحليل كلمة المرور
+                </button>
+            </form>
+
+            <section id="analysis-result" class="result-box" hidden aria-live="polite">
+                <h2>نتيجة التحليل</h2>
+                <p id="strength-label"></p>
+
+                <div class="strength-track">
+                    <div id="strength-bar" class="strength-bar"></div>
+                </div>
+
+                <ul id="analysis-feedback"></ul>
+            </section>
+
+            <p class="security-note">
+                تنبيه: استخدم كلمة مرور تجريبية، ولا تدخل كلمة مرورك
+                الحقيقية أو كلمة مرور حساب مهم.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 PasswordGuard</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
